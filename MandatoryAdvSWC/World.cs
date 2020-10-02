@@ -2,7 +2,9 @@
 
 namespace MandatoryAdvSWC
 {
-    public class Class1
+    public abstract class World
     {
+
+
     }
 }
