@@ -75,20 +75,20 @@ namespace MandatoryAdvSWC
 
         public virtual int Attack()
         {
-            return strength + equippedWeapon.Damage();
+            return strength + EquippedWeapon.Damage();
         }
 
         public virtual int Defend(int attack)
         {
-            attack = attack - equippedArmor.Defence;
-            if (attack > 0)
+            attack = attack - EquippedArmor.Defence;
+            if (attack < 0)
             {
                 attack = 0;
             }
-            hitpoints = hitpoints - attack;
-            if (hitpoints<0)
+            Hitpoints = Hitpoints - attack;
+            if (Hitpoints<0)
             {
-                hitpoints = 0;
+                Hitpoints = 0;
             }
             return attack;
         }

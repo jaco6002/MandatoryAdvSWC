@@ -33,17 +33,17 @@ namespace MandatoryAdvSWC.Factories
             Position p = new Position() {X = rand.Next(w.MaxX), Y = rand.Next(w.MaxY)};
             if (rarity >= 0 && rarity < 50)
             {
-                return new Weapon(rand.Next(2), rand.Next(2, 5), Name,p);
+                return new Weapon(rand.Next(20), rand.Next(20, 50), Name,p);
             }
 
             if (rarity >= 50 && rarity < 80)
             {
-                return new Weapon(rand.Next(5, 8), rand.Next(7, 12), Name,p);
+                return new Weapon(rand.Next(50, 80), rand.Next(70, 120), Name,p);
             }
 
             if (rarity >= 80 && rarity <= 100)
             {
-                return new Weapon(rand.Next(11, 15), rand.Next(14, 21), Name,p);
+                return new Weapon(rand.Next(110, 150), rand.Next(140, 210), Name,p);
             }
             throw new Exception("something went wrong");
         }
