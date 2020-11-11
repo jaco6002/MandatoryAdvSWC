@@ -6,7 +6,6 @@ namespace MandatoryAdvSWC.Interfaces
 {
     public interface IEquipable
     {
-        public int Durability { get; set; }
         public bool IsEquipped { get; set; }
         public IPosition Position { get; set; }
 

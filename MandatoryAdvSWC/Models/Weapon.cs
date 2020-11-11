@@ -6,7 +6,7 @@ namespace MandatoryAdvSWC
 {
     public class Weapon : Equipable
     {
-        private Random rand = new Random(42);
+        private static Random rand = new Random(42);
         private int minDamage;
         private int maxDamage;
 
@@ -33,6 +33,13 @@ namespace MandatoryAdvSWC
             this.minDamage = minDamage;
             this.maxDamage = maxDamage;
             this.Name = Name;
+        }
+        public Weapon(int minDamage, int maxDamage, string Name,Position position)
+        {
+            this.minDamage = minDamage;
+            this.maxDamage = maxDamage;
+            this.Name = Name;
+            this.Position = position;
         }
 
         public virtual int Damage()

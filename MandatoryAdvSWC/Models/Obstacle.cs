@@ -9,5 +9,6 @@ namespace MandatoryAdvSWC
     {
         public string Name { get; set; }
         public Position Position { get; set; }
+        public bool Removable { get; set; }
     }
 }

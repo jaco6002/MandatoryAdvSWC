@@ -10,7 +10,7 @@ namespace MandatoryAdvSWC.Interfaces
         public string Name { get; set; }
         public Armor EquippedArmor { get; }
         public Weapon EquippedWeapon { get;}
-
+        public Position Position { get; set; }
         int Attack();
         int Defend(int attack);
         void Loot(IEquipable equipable);

@@ -7,7 +7,6 @@ namespace MandatoryAdvSWC
 {
     public abstract class Equipable: IEquipable
     {
-        private int durability;
         private bool isEquipped=false;
         private IPosition? position;
         private string name;
@@ -26,12 +25,6 @@ namespace MandatoryAdvSWC
         //    }
         //}
 
-
-        public int Durability
-        {
-            get => durability;
-            set => durability = value;
-        }
 
         public bool IsEquipped
         {

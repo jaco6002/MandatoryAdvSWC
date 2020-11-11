@@ -11,40 +11,13 @@ namespace MandatoryAdvSWC
         private int hitpoints;
 
         private string name;
-        private Random rand=new Random(42);
+        private static Random rand=new Random(42);
         private int strength;
-        private List<Armor> armorInventory;
+        private List<Armor> armorInventory= new List<Armor>();
         private Armor equippedArmor;
         private Weapon equippedWeapon;
-        private List<Weapon> weaponInventory;
-        //private Position position;
-        //private int defence;
+        private List<Weapon> weaponInventory = new List<Weapon>();
 
-        //public int Defence
-        //{
-        //    get
-        //    {
-        //        int sum = 0;
-        //        foreach (var a in armor)
-        //        {
-        //            sum = sum + a.Defence;
-        //        }
-
-        //        return sum;
-        //    }
-        //}
-
-
-        //public virtual int Defend(int attack)
-        //{
-        //    attack = attack - defence;
-        //    if (attack>0)
-        //    {
-        //        attack = 0;
-        //    }
-        //    hitPoints = hitPoints - attack;
-        //    return attack;
-        //}
         public int Hitpoints
         {
             get => hitpoints;
@@ -89,7 +62,9 @@ namespace MandatoryAdvSWC
             }
         }
 
-        protected Creature(int hitpoints, string name, int strength)
+        public Position Position { get; set; }
+
+        public Creature(int hitpoints, string name, int strength)
         {
             this.hitpoints = hitpoints;
             this.name = name;
